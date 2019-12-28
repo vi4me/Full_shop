@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p class= "padding_top">
+  <strong>Author:</strong>
+  <%= @comment.user.full_name %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @comment.body %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @comment.product_id %>
+</p>
+
+<% if current_user.try(:admin?) %>
+
+<%= link_to 'Edit', edit_comment_path(@comment), class: "button-secondary" %> |
+<% end %>
+<%= link_to 'Back', comments_path, class: "button-secondary" %>

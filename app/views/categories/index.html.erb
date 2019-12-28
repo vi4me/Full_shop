@@ -1,0 +1,22 @@
+<div class="container padding">
+  <h1 class="text-center padding_top">Группы</h1>
+  <div class="group_box padding">
+
+    <% @categories.each do |category| %>
+
+    <div class="group_img oneImg">
+      <% category.images.each do |image| %>
+        <%= image_tag(image.file_url) %>
+      <% end %>
+    </div>
+
+    <div class="group_info">
+      <h2><%= link_to category.title, category_path(category) %></h2>
+      <p><%= category.body %></p>
+    </div>
+
+    <% end %>
+  </div> 
+</div>
+
+

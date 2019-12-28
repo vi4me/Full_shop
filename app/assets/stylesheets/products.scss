@@ -1,0 +1,58 @@
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*product.index*/
+
+.prod_case_box {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat (auto-fill, 400px);
+    grid-row-gap: 40px;
+}
+
+.prod_case_info {
+	display: grid;
+	grid-template-rows: 40px 40px 290px;
+	justify-content: left;
+    padding: 20px;
+    margin-right: 12px;
+    border: 2px solid #1E1010;
+	overflow-x:scroll;
+}
+
+.prod_case_img {
+	display: grid;
+	justify-content: right;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.prod_case_img img {	
+    background-size: cover;
+    background-position: center;
+	width: 100%;
+    height: 100%;
+}
+
+/*product.show*/
+
+.img_section1 {
+	padding: 10px;
+}
+
+.prod_img1 img {
+	padding: 10px;
+	height: 300px;
+	width: 32%;
+	background-size: cover;
+	background-position:center;
+	position: relative;
+}
+
+.prod_img1 img:nth-child(1) {
+	width: 64%;
+}
+
+.oneImg img:not(:first-child) {
+	display: none;
+}

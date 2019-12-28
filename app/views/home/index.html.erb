@@ -1,0 +1,196 @@
+<div class="padding_top">
+  <div class="carousel slide" data-ride="carousel" id="slides">
+
+  <ul class="carousel-indicators">
+    <li data-target="#slides" data-slide-to="0" class="active"></li>
+    <li data-target="#slides" data-slide-to="1"></li>
+    <li data-target="#slides" data-slide-to="2"></li>
+  </ul>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/1.jpg">
+      <div class="carousel-caption">
+        <h1 class="display-2">РЮКЗАКИ</h1>
+        <h3>Что-то про рюкзаки</h3>
+        <button type="button" class="btn btn-outline-light btn-lg">Посмотреть</button>
+        <button type="button" class="btn btn-warning btn-lg">Кнопка</button>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/2.jpg">
+    </div>
+    <div class="carousel-item">
+       <img src="assets/3.jpg">
+    </div>
+  </div>    
+</div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row jumbotron">
+    <div class="text_review col-xs-12 col-sm-12">
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio placeat consequatur tempore aut eaque, dignissimos sint temporibus accusantium explicabo ducimus doloremque totam excepturi quod, vel saepe ex aliquam hic! Voluptates?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt corporis nemo adipisci, repudiandae, doloremque ullam eius ea vitae officiis voluptatem, magnam temporibus dolorem unde dolorum! Deleniti fuga alias, explicabo suscipit.</p>
+    </div>
+    <div class="col-xs-12 col-sm-12 vol-md-3 col-lg-3 col-xl-2">
+      
+
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row text-center alert">
+    <div class="col-12">
+      <h1 class="display-4">НАЗВАНИЕ</h1>
+    </div>
+    <hr>
+    <div class="col-12">
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptas, provident nostrum at voluptates itaque ipsum? Culpa voluptate, minus cumque minima totam, officiis quam voluptas necessitatibus quibusdam aut, dolorum magnam. Ullam beatae ducimus tempore nostrum praesentium accusantium adipisci debitis voluptatibus impedit, similique maiores alias illo fugiat natus quaerat repellat totam, quasi voluptatem sit libero. Inventore nesciunt deleniti, iusto sit perferendis.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid padding">
+  <div class="row text-center padding">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <i class="fas fa-code"></i>
+        <h3>HTML5</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <i class="fas fa-bold"></i>
+        <h3>Bootstrap</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <i class="fab fa-css3"></i>
+        <h3>CSS3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+    </div>
+  </div>
+  <hr class="my-4">
+</div>
+
+<figure>
+  <div class="fixed-wrap">
+    <div id="fixed">
+      
+    </div>
+  </div>
+</figure>
+
+<div class="text-center">
+  <button type="button" class="btn btn-success" id="gifsBtn" data-toggle="collapse" data-target="#gif">Открыть блок</button>
+</div>
+<div class="collapse gifs" id="gif">
+  <div class="container-fluid paddind">
+    <div class="row text-center">
+      <div class="col-sm-6 col-md-3">
+        <img src="assets/1.jpg" alt="">
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <img src="assets/2.jpg" alt="">
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <img src="assets/3.jpg" alt="">
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <img src="assets/4.jpg" alt="">
+      </div>
+    </div>
+
+  </div> 
+</div>
+
+<h1 class="display-4 text-center" id="best_prod">Лучшие товары</h1>
+<div class="container padding">
+  <div class="prod_box padding">
+
+    <% @products.each do |product| %>
+    <div class="prod_info text-center">
+      <div class="rotate">
+        <div class="prod_img oneImg">
+          <% product.images.each do |image| %>
+            <%= image_tag(image.file_url, class: 'img-responsive img-rounded') %>
+          <% end %>
+        </div>
+        
+        <div class="text">
+          <div class="pd">
+            <h3 class="card-title"><%= product.name%></h4>
+            <p class="description"><%= product.pr_description %></p>
+            <p>Цена: <%= product.price %></p>
+
+            <button type="button" class="btn btn-success" >Открыть блок</button>
+          </div>
+        </div> 
+      </div> 
+    </div>
+    <% end %>
+  </div>  
+</div>
+<details>Покажи, что у тебя есть!</details>
+<br>
+<dl>
+  <dt>GIF</dt>
+  <dd>Формат графических файлов, широко применяемый при создании сайтов. 
+   GIF использует 8-битовый цвет и эффективно сжимает сплошные цветные области, 
+   при этом сохраняя детали изображения.</dd>
+  <dt>JPEG</dt>
+  <dd>Популярный формат графических файлов, широко применямый при создании 
+  сайтов и хранения изображений. JPEG поддерживает 24-битовый цвет и сохраняет 
+  яркость и оттенки цветов в фотографиях. Данный формат называют сжатием с потерями, 
+  поскольку алгоритм JPEG выборочно отвергает данные. Метод сжатия может исказить 
+  деталь в рисунке, особенно содержащий текст или изображение с четкими краями. 
+  Формат JPEG не поддерживает прозрачность, когда вы сохраняете фотографию в формате 
+  JPEG, прозрачные пиксели заполняются определенным цветом.</dd>
+</dl>
+ <div class="block1">Lorem ipsum dolor sit amet, consectetuer 
+   adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet 
+   dolore magna aliguam erat volutpat.</div>
+  <div class="block2">Ut wisis enim ad minim veniam, quis nostrud 
+   exerci tution ullamcorper suscipit lobortis nisl ut aliquip ex 
+   ea commodo consequat.</div> 
+<br>
+<form action="handler.php">
+  <fieldset>
+   <legend>Работа со временем</legend>
+     <input type="checkbox"> создание пунктуальности (никогда не 
+      будете никуда опаздывать);<br>
+     <input type="checkbox"> излечение от пунктуальности (никогда 
+      никуда не будете торопиться);<br>
+     <input type="checkbox"> изменение восприятия времени и часов.
+      <p><input type="submit"></p>
+  </fieldset>
+ </form> 
+<br>
+<form name="test" method="post" action="input1.php">
+  <p><b>Ваше имя:</b><br>
+   <input type="text" size="40">
+  </p>
+  <p><b>Каким браузером в основном пользуетесь:</b><Br>
+   <input type="radio" name="browser" value="ie"> Internet Explorer<Br>
+   <input type="radio" name="browser" value="opera"> Opera<Br>
+   <input type="radio" name="browser" value="firefox"> Firefox<Br>
+  </p>
+  <p>Комментарий<Br>
+   <textarea name="comment" cols="40" rows="3"></textarea></p>
+  <p><input type="submit" value="Отправить">
+   <input type="reset" value="Очистить"></p>
+</form>
+<br>
+<main>
+  История о том, как возле столовой появились загадочные розовые 
+  следы с шестью пальцами, и почему это случилось. 
+</main>
+<br>
+<marquee behavior="alternate" direction="left" bgcolor="#ffcc00">
+    Lorem ipsum dolor sit amet...
+</marquee>
+
+<br>
+
+
+
+

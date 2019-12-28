@@ -1,0 +1,17 @@
+
+<div class=" text-center padding_top">     
+  <h1>My Profile</h1>
+
+  <%= form_for @user do |f| %>
+  <div class="form-group">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="form-group">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <%= f.submit 'Save', class: 'btn btn-default' %>
+  <% end %>
+</div> 

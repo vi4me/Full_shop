@@ -1,0 +1,38 @@
+
+<p id="notice"><%= notice %></p>
+
+<h1 class= "padding_top">Comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th>Body</th>
+      <th>Product ID</th>
+      <th>Product</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.user.full_name %></td>
+        <td><%= comment.body %></td>
+        <td><%= comment.product_id %></td>
+        <td><%= comment.product.name %></td>
+        <td><%= link_to 'Show', comment %></td>
+
+        <% if current_user.try(:admin?) %>
+
+        <td><%= link_to 'Edit', comment%></td>
+        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' }%></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comment', new_comment_path, class: "button-secondary" %>

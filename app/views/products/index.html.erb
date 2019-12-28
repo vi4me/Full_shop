@@ -1,0 +1,20 @@
+<div class="container padding">
+  <h1 class="text-center padding_top">Продукты Группы</h1>
+  <div class="prod_case_box padding">
+
+    <% @category.products.each do |product| %>
+    <div class="prod_case_info">
+      <h2><%= link_to product.name, category_product_path(@category, product)%></h2>
+      <h3 class="card-title pricing-card-title">Цена: <%= product.price %></h3>
+      <p class="description"><%= product.pr_description %></p>
+    </div>
+
+    <div class="prod_case_img oneImg">
+      <% product.images.each do |image| %>
+        <%= image_tag(image.file_url) %>
+      <% end %>
+    </div>
+    <% end %>
+  </div> 
+</div>
+
