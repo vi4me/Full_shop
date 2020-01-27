@@ -34,4 +34,15 @@ jQuery(".read_more").click(function(){
     jQuery(this).parent().html( jQuery(this).parent().find(".full_text").html() );
 });
 
+// more photo
+
+
+jQuery('.left_side').on('click', '.photos', function() {
+    var src = jQuery(this).attr('src');
+    jQuery(this).parent().parent().closest('.left_side').find('.first_foto img').attr('src', src);
 });
+
+});
+
+
+  
